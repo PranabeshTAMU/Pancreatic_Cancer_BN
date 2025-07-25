@@ -126,4 +126,3 @@ combo_array = np.array(output_list)
     #output_two_faults = np.column_stack((combo_array, B))
     #output_three_faults = np.column_stack((combo_array, C))
 output = np.column_stack((combo_array, A, B, C))    
-    
