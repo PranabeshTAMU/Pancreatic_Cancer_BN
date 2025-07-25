@@ -1,4 +1,4 @@
-#Single fault
+#Three faults
 
 def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7, x8):
   # Inputs
@@ -56,7 +56,7 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 5 or fault2 == 5 or fault3 == 5:
     TGFBR12 = 1
   else:
-    TGFBR12 = int(TGFbeta and (not berberine))
+    TGFBR12 = int(TGFbeta and (not berberine) and (not afatinib))
   if fault1 == 6 or fault2 == 6 or fault3 == 6:
     SMAD = 1
   else:
@@ -64,16 +64,16 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 7 or fault2 == 7 or fault3 == 7:
       RAS = 1
   else:
-      RAS = int((KRAS and (not berberine)) or ALK)
+      RAS = int((KRAS and (not berberine)and (not gefitinib)) or ALK)
   if fault1 == 8 or fault2 == 8 or fault3 == 8:
     RAF = 1
   else:
-    RAF = int(RAS and (not berberine))
+    RAF = int(RAS and (not berberine)and (not gefitinib))
   
   if fault1 == 9 or fault2 == 9 or fault3 == 9:
     MEK = 1
   else:
-    MEK = int(RAF)
+    MEK = int(RAF and (not gefitinib))
   
   if fault1 == 10 or fault2 == 10 or fault3 == 10:
     JAK = 1
@@ -92,12 +92,12 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 13 or fault2 == 13 or fault3 == 13:
     PI3K = 1
   else:
-    PI3K = int((STAT and (not gefitinib)and (not palmatine) and (not dacomitinib) and (not afatinib)) or IRS or (EGFR and (not gefitinib) and (not afatinib) and (not dacomitinib)) or  (ERBB2 and (not afatinib) and (not dacomitinib)) or (RAS and (not berberine)))
+    PI3K = int((STAT and (not gefitinib)and (not palmatine) and (not dacomitinib) and (not afatinib)) or IRS or (EGFR and (not gefitinib) and (not afatinib) and (not dacomitinib)) or  (ERBB2 and (not afatinib) and (not dacomitinib)) or (RAS and (not berberine) and (not gefitinib)))
   
   if fault1 == 14 or fault2 == 14 or fault3 == 14:
     PIP3 = 1
   else:
-    PIP3 = int((PI3K and (not berberine)and (not palmatine) and (not gefitinib) and (not dacomitinib) and (afatinib)) or (not (PTEN or berberine)))
+    PIP3 = int((PI3K and (not berberine)and (not palmatine) and (not gefitinib) and (not dacomitinib) and (not afatinib)) or (not (PTEN or abraxane)))
   if fault1 == 15 or fault2 == 15 or fault3 == 15:
     PKB_AKT = 1
   else:
@@ -129,12 +129,12 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 21 or fault2 == 21 or fault3 == 21:
     RalGDS = 1
   else:
-    RalGDS = int(KRAS and (not berberine))
+    RalGDS = int(KRAS and (not berberine)and (not gefitinib))
   
   if fault1 == 22 or fault2 == 22 or fault3 == 22:
     GLI1 = 1
   else:
-    GLI1 = int((ERK and (not berberine)and (not gefitinib) and (not afatinib)) or SMAD)      
+    GLI1 = int((ERK and (not berberine)and (not gefitinib) and (not afatinib) and (not palmatine)) or SMAD)      
   
   if fault1 == 23 or fault2 == 23 or fault3 == 23:
     DAXX = 0
@@ -177,7 +177,7 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 31 or fault2 == 31 or fault3 == 31:
     IKK = 1
   else:
-    IKK = int(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (afatinib))
+    IKK = int(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (not afatinib))
   if fault1 == 32 or fault2 == 32 or fault3 == 32:
     PA = 1
   else:
@@ -190,7 +190,7 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 34 or fault2 == 34 or fault3 == 34:
     TSC1by2 = 0 
   else:
-    TSC1by2 = int((not(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (afatinib))) and (AMPK or berberine)) 
+    TSC1by2 = int((not(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (not afatinib))) and (AMPK or berberine)) 
     
   if fault1 == 35 or fault2 == 35 or fault3 == 35:
     MDM2 = 0
@@ -207,17 +207,17 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   else:
     BRCA2 = int(P53 or gemcitabine )
   if fault1 == 38 or fault2 == 38 or fault3 == 38:     
-    RHEB = 0
+    RHEB = 1
   else:    
-    RHEB = int (TSC1by2)
+    RHEB = int (not TSC1by2)
   if fault1 == 39 or fault2 == 39 or fault3 == 39:       
     mTOR = 1
   else:
-    mTOR = int(RHEB and PA)
+    mTOR = int(RHEB or PA)
   if fault1 == 40 or fault2 == 40 or fault3 == 40:   
     RPS6KB = 1
   else:
-    RPS6KB = int ((mTOR and (not berberine)) or (ERK and (not berberine)and (not gefitinib) and (not afatinib)) or PDPK)
+    RPS6KB = int ((mTOR and (not berberine)) or (ERK and (not berberine)and (not gefitinib) and (not afatinib) and (not palmatine)) or PDPK)
   if fault1 == 41 or fault2 == 41 or fault3 == 41:   
     GSK3 = 0
   else:
@@ -225,7 +225,7 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 42 or fault2 == 42 or fault3 == 42:   
     BAD = 0
   else:
-    BAD = int ((not(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (afatinib))) and (not RPS6KB))
+    BAD = int ((not(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (not afatinib))) and (not RPS6KB))
   if fault1 == 43 or fault2 == 43 or fault3 == 43:   
     CyclinD1 = 1 
   else:
@@ -237,11 +237,11 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 45 or fault2 == 45 or fault3 == 45:   
     CDK4by1 = 1 
   else:
-    CDK4by1 = int((CyclinD1 and (not GANT61))or (not P16) or (not P21)) 
+    CDK4by1 = int((CyclinD1 and (not GANT61) and (not palmatine) and (not dacomitinib) and (not gefitinib)) or (not P16) or (not (P21 or abraxane))) 
   if fault1 == 46 or fault2 == 46 or fault3 == 46:       
     Rb = 1 
   else:
-    Rb = int(CDK4by1)
+    Rb = int(CDK4by1 and (not abraxane))
   if fault1 == 47 or fault2 == 47 or fault3 == 47:       
     RAD51 = 0
   else:
@@ -253,10 +253,10 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 49 or fault2 == 49 or fault3 == 49:       
     BCL_XL = 1
   else:
-    BCL_XL = int(((not BAD) or RPS6KB or (STAT and (not gefitinib) and (not palmatine) and (not dacomitinib) and (not afatinib))) or ((PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (afatinib)) or (GLI1 and (not GANT61))))
+    BCL_XL = int(((not BAD) or RPS6KB or (STAT and (not gefitinib) and (not palmatine) and (not dacomitinib) and (not afatinib))) or ((PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (not afatinib)) or (GLI1 and (not GANT61))))
      
-  SRFELK1 = int((ERK and (not berberine)and (not gefitinib) and (not afatinib)) and RPS6KB)
-  SP1 =  int((ERK and (not berberine)and (not gefitinib) and (not afatinib)))
+  SRFELK1 = int((ERK and (not berberine)and (not gefitinib) and (not afatinib) and (not palmatine)) and RPS6KB)
+  SP1 =  int((ERK and (not berberine)and (not gefitinib) and (not afatinib) and (not palmatine)))
   E2F = int(Rb)
   FOS_JUN = int(RPS6KB and JNK)
   BAX = int((P53 or gemcitabine) and (not (BCL_XL and (not abraxane) and (not GANT61))))
