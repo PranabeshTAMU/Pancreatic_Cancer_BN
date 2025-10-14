@@ -1,0 +1,9 @@
+drug_name,primary_targets,pathway_affiliation,mechanism,interaction_type
+palmatine,"PI3K,AKT,STAT3,ERK","PI3K-AKT,JAK-STAT,MAPK",multi_target_inhibition,inhibitor
+berberine,"PI3K,AKT,mTOR,NF-κB,ERK,RAS,TGFβ","PI3K-AKT,mTOR,NF-κB,MAPK,TGF-β",pleiotropic_inhibition,inhibitor
+abraxane,"BCL-XL,PTEN,CDK4,P21","Apoptosis,PI3K-AKT,Cell_Cycle",microtubule_stabilization,inhibitor
+gemcitabine,"DNA_synthesis,P53,BRCA2","DNA_Repair,p53",DNA_incorporation,inhibitor
+gefitinib,"EGFR,PI3K,STAT3","EGFR,PI3K-AKT,JAK-STAT",tyrosine_kinase_inhibition,inhibitor
+dacomitinib,"EGFR,ERBB2,PI3K,MEK","EGFR,PI3K-AKT,MAPK",pan_HER_inhibition,inhibitor
+afatinib,"EGFR,ERBB2,PI3K,ERK,MEK,JNK","EGFR,PI3K-AKT,MAPK",irreversible_HER_inhibition,inhibitor
+GANT61,"GLI1,CyclinD1,BCL-XL","Hedgehog,Cell_Cycle,Apoptosis",transcription_factor_inhibition,inhibitor

@@ -1,0 +1,13 @@
+input_node,healthy_state,description
+P16,1,Cell cycle inhibitor - active in healthy cells
+KRAS,0,Oncogene - inactive in healthy cells
+EGF,0,Growth factor - minimal in healthy cells
+TGFalpha,0,Growth factor - minimal in healthy cells
+HBEGF,0,Growth factor - minimal in healthy cells
+NRG1,0,Growth factor - minimal in healthy cells
+LKB1,1,Tumor suppressor - active in healthy cells
+PTEN,1,Tumor suppressor - active in healthy cells
+IGF,0,Growth factor - minimal in healthy cells
+ALK,0,Oncogene - inactive in healthy cells
+DNADamage,1,DNA damage signals present for repair
+TGFbeta,0,Context-dependent - minimal in healthy proliferation
