@@ -35,11 +35,7 @@ python pancreatic_main.py
 │   ├── drug_combinations.csv     # All 162 combinations
 │   └── input_states.csv          # Input node states
 ├── results/                      # Output files
-│   ├── single_fault_results.csv
-│   ├── double_fault_results.csv
-│   └── triple_fault_results.csv
-├── config/                       # Configuration files
-├── docs/                         # Documentation
+│   ├── Addional File 1(Supplementary File).xlsx
 ├── environment.yml               # Conda environment
 └── requirements.txt              # Pip requirements
 ```
