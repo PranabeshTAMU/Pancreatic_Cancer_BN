@@ -22,7 +22,7 @@ pancreatic_three_faults.py: Triple mutation analysis (18,424 scenarios)
 
 Data Files (4 CSV datasets):
 
-network_nodes.csv: 69-node Boolean network topology with 12 external inputs and 57 intermediate nodes
+network_nodes.csv: 69-node Boolean network topology with 12 external inputs, 8 outputs, and 49 intermediate nodes
 
 fault_position_table_with_references-S2.csv: 49 driver mutation positions (KRAS, TP53, SMAD4, LKB1, BRCA2)
 
