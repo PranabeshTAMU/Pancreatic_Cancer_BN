@@ -1,84 +1,128 @@
-# Pancreatic Cancer Boolean Network Analysis
+Title:
+Computational Analysis of Palmatine and Berberine Efficacy in Drug Combinations for Pancreatic Cancer Using Boolean Network Modeling - Reproducibility Package
 
-This repository contains the complete computational framework for analyzing drug combinations in pancreatic cancer using Boolean network modeling.
+Description:
 
-## Quick Start
+This reproducibility package contains the complete computational implementation and datasets supporting the research article: "Computational Analysis of Palmatine and Berberine Efficacy in Drug Combinations for Pancreatic Cancer Using Boolean Network Modeling."
 
-```bash
-# Clone repository
-git clone https://github.com/PranabeshTAMU/PancreaticCancerBN.git
-cd PancreaticCancerBN
+Overview:
+Pancreatic ductal adenocarcinoma (PDAC) remains one of the most aggressive malignancies with limited effective therapeutic options. This study employs Boolean network modeling—a systems-level approach—to computationally explore the therapeutic potential of natural alkaloids (Berberine and Palmatine) in combination with established chemotherapeutic agents (Gemcitabine, Nab-paclitaxel) and targeted inhibitors (EGFR inhibitors, GANT61).
 
-# Setup environment
-conda env create -f environment.yml
-conda activate pancreatic-bn
+Contents:
 
-# Or using pip
-pip install -r requirements.txt
+Python Code (4 main scripts):
 
-# Run complete analysis
-python pancreatic_main.py
-```
+pancreatic_main.py: Main simulation controller
 
+pancreatic_single_fault.py: Single mutation analysis (49 scenarios)
+
+pancreatic_two_faults.py: Double mutation analysis (1,176 scenarios)
+
+pancreatic_three_faults.py: Triple mutation analysis (18,424 scenarios)
+
+Data Files (4 CSV datasets):
+
+network_nodes.csv: 69-node Boolean network topology with 12 external inputs and 57 intermediate nodes
+
+fault_position_table_with_references-S2.csv: 49 driver mutation positions (KRAS, TP53, SMAD4, LKB1, BRCA2)
+
+drug_combinations.csv: 162 unique drug combinations tested
+
+drug_target_table_with_pathways-S1.csv: Drug-target interactions and pathway affiliations
+
+Documentation:
+
+README.md: Quick-start guide and repository overview
+
+USER_GUIDE.md: Detailed installation and usage instructions
+
+requirements.txt: Python dependencies (NumPy, Pandas, SciPy, Matplotlib)
+
+environment.yml: Conda environment specification
+
+Execution Scripts:
+
+Shell scripts for running individual or complete analyses
+
+Python validation script for installation verification
+
+Key Findings:
+
+The top-ranked three-drug combination (Berberine + Nab-paclitaxel + Gemcitabine) demonstrated superior Boolean network restoration with NMSD = 0.02
+
+Natural alkaloids show synergistic effects when combined with chemotherapy and targeted agents
+
+Results indicate promising therapeutic avenues for further experimental validation
+
+Methodology:
+
+Network Model: 69-node Boolean regulatory network
+
+Analysis Type: Fault tolerance analysis simulating driver mutations
+
+Similarity Metric: Normalized Mean Square Deviation (NMSD)
+
+Drug Screening: Systematic evaluation of 162 drug combinations across single, double, and triple fault scenarios
+
+System Requirements:
+
+Python 3.8 or higher
+
+4 GB RAM (minimum)
+
+Unix/Linux or macOS (Windows with WSL2)
+
+Estimated runtime: 2-3 hours for complete analysis
+
+Usage:
+
+
+bash
+# Quick start pip install -r requirements.txt bash scripts/run_all.sh
+
+Keywords:
+Boolean networks, systems biology, pancreatic cancer, drug combination, Berberine, Palmatine, computational modeling, network pharmacology, cancer therapeutics
+
+License:
+MIT License
+
+Author:
+Pranabesh Bhattacharjee¹*, Aniruddha Datta¹
+
+¹ Department of Electrical and Computer Engineering, Texas A&M University, College Station, TX, USA
+
+Contact:
+p.bhattacharjee@tamu.edu
 ## Repository Structure
 
-```
-├── src/                          # Source code
-│   ├── pancreatic_main.py        # Main analysis script
-│   ├── pancreatic_single_fault.py   # Single mutation analysis
-│   ├── pancreatic_two_faults.py     # Double mutation analysis
-│   └── pancreatic_three_faults.py   # Triple mutation analysis
-├── data/                         # Network and drug data
-│   ├── network_nodes.csv         # Node specifications
-│   ├── boolean_functions.json    # Network logic
-│   ├── drug_targets.csv          # Drug-target mappings
-│   ├── drug_combinations.csv     # All 162 combinations
-│   └── input_states.csv          # Input node states
-├── results/                      # Output files
-│   ├── Addional File 1(Supplementary File).xlsx
-├── environment.yml               # Conda environment
-└── requirements.txt              # Pip requirements
-```
+pancreatic-cancer-boolean-network/
+├── README.md ✅
+├── LICENSE ✅
+├── .gitignore ✅
+├── requirements.txt ✅
+├── environment.yml ✅
+│
+├── code/
+│   ├── pancreatic_main.py ✅
+│   ├── pancreatic_single_fault.py ✅
+│   ├── pancreatic_two_faults.py ✅
+│   ├── pancreatic_three_faults.py ✅
+│   └── utils.py (placeholder)
+│
+├── data/
+│   ├── network_nodes.csv ✅
+│   ├── fault_position_table_with_references-S2.csv ✅
+│   ├── drug_combinations.csv ✅
+│   └── drug_target_table_with_pathways-S1.csv ✅
+│
+├── scripts/
+│   ├── run_all.sh ✅
+│   ├── run_single_fault.sh ✅
+│   ├── run_two_faults.sh ✅
+│   ├── run_three_faults.sh ✅
+│   └── test_installation.py ✅
+│
+└── docs/
+    └── USER_GUIDE.md ✅
 
-## Key Features
 
-- **49 fault locations** representing pancreatic cancer mutations
-- **162 drug combinations** (0-4 drugs from 8 available compounds)
-- **19,649 total scenarios** (single, double, triple mutations)
-- **Systematic NMSD scoring** for drug efficacy evaluation
-- **Reproducible results** with fixed random seed (42)
-
-## Usage Examples
-
-### Run specific mutation analysis
-```python
-from pancreatic_single_fault import pancreaticsinglefault
-
-# Test single KRAS mutation with Berberine
-result = pancreaticsinglefault(7, 0, 1, 0, 0, 0, 0, 0, 0)
-print(f"NMSD Score: {result}")
-```
-
-### Analyze drug combinations
-```python
-# Run comprehensive analysis
-python pancreatic_main.py
-
-# Results will be saved in results/ directory
-```
-
-## Data Files
-
-All network topology, Boolean functions, and drug specifications are provided in structured CSV/JSON format for reproducibility.
-
-## Citation
-
-If you use this code, please cite:
-```
-Bhattacharjee et al. (2025). Computational Analysis of Palmatine and Berberine 
-Efficacy in Drug Combinations for Pancreatic Cancer Using Boolean Network Modeling.
-```
-
-## License
-
-MIT License - see LICENSE file for details.
