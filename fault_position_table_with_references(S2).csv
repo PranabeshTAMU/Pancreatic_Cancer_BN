@@ -1,0 +1,50 @@
+Fault_ID,Node_Name,Pathway,Stuck_at-fault Direction,Reference
+1,EGFR,EGFR/ERBB signaling,1 (gain),Pham NA et al. Cancer Res 2013 [PMC3757375]; Moore MJ et al. J Clin Oncol 2007
+2,ERBB2,EGFR/ERBB signaling,1 (gain),Chou A et al. Sci Rep 2020 [PMC9027548]; Harder J et al. Ann Oncol 2012
+3,IGFR,IGF signaling,1 (gain),Hirakawa T et al. PLoS One 2014 [121]; Basu A et al. Clin Cancer Res 2020 [PMC7415636]
+4,ATM,DNA damage response,1 (dysfunction),Grant RC et al. Ann Pancreatic Cancer 2021 [114]; Roberts NJ et al. Cancer Discov 2012 [PMC3676748]
+5,TGFBR1/2,TGF-B signaling,1 (gain/loss),Hahn SA et al. Science 1996 [123]; Ijichi H et al. EMBO Mol Med 2020 [115]
+6,SMAD,TGF-B/SMAD signaling,1 (gain/loss),Bailey P et al. Nature 2016; Blackford A et al. Nat Commun 2024 [116]
+7,KRAS,MAPK signaling,1 (G12D mutation),Prior IA et al. Cancer Res 2020 [125]; Waters AM et al. Front Cell Dev Biol 2023 [117]
+8,RAF,MAPK signaling,1 (gain),Brose MS et al. Cancer Res 2002; Corcoran RB et al. Oncologist 2023 [126]
+9,MEK,MAPK signaling,1 (gain),Infante JR et al. J Clin Oncol 2012; Pang Y et al. Theranostics 2018
+10,JAK,JAK/STAT signaling,1 (gain),Lesina M et al. Cancer Cell 2011; Yu H et al. Nat Rev Cancer 2009
+11,STAT,JAK/STAT signaling,1 (gain),Corcoran RB et al. Cancer Cell 2011 [142]; Zhang Q et al. J Exp Clin Cancer Res 2024 [130]
+12,IRS,PI3K/AKT signaling,1 (gain),Ma J et al. Int J Clin Exp Pathol 2018 [131]; Kornmann M et al. Cancer Res 1998 [134]
+13,PI3K,PI3K/AKT signaling,1 (gain),Eser S et al. Oncogene 2015 [132]; Neel NF et al. J Clin Oncol 2015 [129]
+14,PIP3,PI3K/AKT signaling,1 (accumulation),Stanger BZ et al. Cancer Discov 2011 [147]; Song MS et al. Cell 2012 [156]
+15,PKB/AKT,PI3K/AKT signaling,1 (gain),Cheng JQ et al. Mol Cell Biol 2002 [148]; Schaap FG et al. Oncol Lett 2020 [151]
+16,AMPK,Energy sensing/mTOR,0 (loss),Hezel AF et al. Mol Cell Biol 2008 [149]; Morton JP et al. Nature Sci Rep 2015 [152]
+17,RacGEF,Cytoskeletal regulation,1 (gain),Pylayeva-Gupta Y et al. Genes Dev 2011; Dykxhoorn DM et al. Nature 2009
+18,ERK,MAPK signaling,1 (gain),Collisson EA et al. Nat Med 2011; Neuzillet C et al. Cancer Discov 2014
+19,PDPK,PI3K/AKT signaling,1 (gain),Alessi DR et al. FEBS Lett 2010; Engelman JA et al. Nat Rev Cancer 2009
+20,JNK,MAPK signaling,1 (gain),Karin M et al. Nat Rev Cancer 2005; Cellurale C et al. Cancer Cell 2012
+21,RalGDS,RAS/RAL signaling,1 (gain),Lim KH et al. Cancer Cell 2005; Martin TD et al. Cancer Res 2011
+22,GLI1,Hedgehog/GLI signaling,1 (gain),Nolan-Stevaux O et al. Gastroenterology 2009; Thayer SP et al. Nature 2003
+23,DAXX,Apoptosis,0 (loss),Heaphy CM et al. Science 2011; de Wilde RF et al. Science 2012
+24,ASK1,Stress response/Apoptosis,0 (loss),Nishitoh H et al. Science 1998; Takeda K et al. J Biol Chem 2000
+25,RAL,RAS/RAL signaling,1 (gain),Lim KH et al. Cancer Cell 2005; Oxford G et al. Oncogene 2005
+26,MKK,MAPK signaling,0 (loss),Dhillon AS et al. Oncogene 2007; Kyriakis JM et al. Physiol Rev 2001
+27,RalBP1,RAS/RAL signaling,0 (loss),Cantor SB et al. Cell 2001; Cascone I et al. Oncogene 2008
+28,PLD1,Lipid signaling,1 (gain),Kang DW et al. Nat Cell Biol 2014; Toschi A et al. Curr Biol 2009
+29,P38,Stress response,0 (loss),Wagner EF et al. Nat Rev Cancer 2009; Cuenda A et al. Front Cell Dev Biol 2017
+30,RAC,Cytoskeletal regulation,1 (gain),Krauthammer M et al. Cancer Discov 2012; Bid HK et al. Mol Cancer 2013
+31,IKK,NF-kB signaling,1 (gain),Karin M et al. Nat Rev Immunol 2002; Perkins ND et al. Nat Rev Cancer 2012
+32,PA,Lipid signaling,1 (gain),Foster DA et al. Trends Endocrinol Metab 2014; Bruntz RC et al. Cancer Metab 2014
+33,NF-kB,NF-kB signaling,1 (gain),Wang W et al. Cancer Res 1999; Stanger BZ et al. Cancer Discov 2011 [147]
+34,TSC1/2,mTOR signaling,0 (loss),Kenerson HL et al. Am J Pathol 2011; Gingras MC et al. Nat Genet 2015
+35,MDM2,p53 signaling,0 (loss),Jones S et al. Science 2008; Wade M et al. Nat Rev Cancer 2013
+36,P53,p53 signaling,0 (loss mutation),Muller PA et al. Cell 2013; Redston MS et al. Cancer Res 1994
+37,BRCA2,DNA repair,0 (loss),Holter S et al. Clin Cancer Res 2015; Yurgelun MB et al. Cancer 2019
+38,RHEB,mTOR signaling,1 (gain),Castro AF et al. J Biol Chem 2003; Sancak Y et al. Cell 2007
+39,mTOR,mTOR signaling,1 (gain),Saxton RA et al. Cell 2017; Laplante M et al. Cell 2012
+40,RPS6KB,mTOR/Translation,1 (gain),Magnuson B et al. Nat Rev Cancer 2012; Pende M et al. Nature 2004
+41,GSK3,Cell cycle regulation,0 (loss),Ougolkov AV et al. Clin Cancer Res 2005; Doble BW et al. J Cell Sci 2003
+42,BAD,Apoptosis,0 (loss),Datta SR et al. Cell 1997; del Peso L et al. Science 1997
+43,Cyclin D1,Cell cycle,1 (gain),Wang TC et al. Nature 1994; Kornmann M et al. Gut 1998
+44,P21,Cell cycle/p53,0 (loss),Abbas T et al. Genes Dev 2009; Gartel AL et al. Exp Cell Res 2002
+45,CDK4/1,Cell cycle,1 (gain),Ortega S et al. Biochim Biophys Acta 2002; Hanahan D et al. Cell 2011
+46,Rb,Cell cycle/Rb,1 (hyperphosphorylation),Caldas C et al. Cancer Res 1994; Wilentz RE et al. Cancer Res 1998
+47,RAD51,DNA repair,0 (loss),Klein HL et al. DNA Repair 2008; Venkitaraman AR et al. Cell 2014
+48,P48,Transcription/DNA repair,0 (loss),Krah NM et al. Cell Mol Gastroenterol Hepatol 2019; Zhu L et al. Proc Natl Acad Sci 2007
+49,BCL-XL,Apoptosis,1 (gain anti-apoptotic),Krajewska M et al. Cancer Res 1996; Miyamoto Y et al. Cancer 1999
