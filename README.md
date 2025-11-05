@@ -60,7 +60,7 @@ Network Model: 69-node Boolean regulatory network
 
 Analysis Type: Fault tolerance analysis simulating driver mutations
 
-Similarity Metric: Normalized Mean Square Deviation (NMSD)
+Similarity Metric: Normalized Mean Size Difference (NMSD)
 
 Drug Screening: Systematic evaluation of 162 drug combinations across single, double, and triple fault scenarios
 
