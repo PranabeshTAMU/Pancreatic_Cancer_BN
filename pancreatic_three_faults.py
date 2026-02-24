@@ -49,9 +49,9 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
     IGFR = int(IGF)
   
   if fault1 == 4 or fault2 == 4 or fault3 == 4:
-    ATM = 1
+    ATM = 0
   else:
-    ATM = int(not (DNA_Damage))
+    ATM = int(DNA_Damage)
   
   if fault1 == 5 or fault2 == 5 or fault3 == 5:
     TGFBR12 = 1
@@ -200,7 +200,7 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
   if fault1 == 36 or fault2 == 36 or fault3 == 36:
     P53 = 0
   else:
-    P53 = int(MDM2 and P38)      
+    P53 = int((not MDM2) and P38)      
 
   if fault1 == 37 or fault2 == 37 or fault3 == 37:     
     BRCA2 = 0
@@ -286,3 +286,4 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
 
   output = ((b + c) ** 2) / ((a + b + c + d) ** 2)
   return(output)
+
