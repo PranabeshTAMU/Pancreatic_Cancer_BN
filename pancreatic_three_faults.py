@@ -193,7 +193,7 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
     TSC1by2 = int((not(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (not afatinib))) and (AMPK or berberine)) 
     
   if fault1 == 35 or fault2 == 35 or fault3 == 35:
-    MDM2 = 0
+    MDM2 = 1
   else:
     MDM2 = int(not (ATM))
 
@@ -286,4 +286,5 @@ def pancreatic_three_faults (fault1, fault2, fault3, x1, x2, x3, x4, x5, x6, x7,
 
   output = ((b + c) ** 2) / ((a + b + c + d) ** 2)
   return(output)
+
 
