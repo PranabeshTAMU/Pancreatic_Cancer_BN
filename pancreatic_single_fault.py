@@ -196,7 +196,7 @@ def pancreatic_single_fault (fault1, x1, x2, x3, x4, x5, x6, x7, x8):
   if fault1 == 36:
     P53 = 0
   else:
-    P53 = int(MDM2 and P38)      
+    P53 = int((not (not MDM2)) and P38)      
 
   if fault1 == 37:     
     BRCA2 = 0
@@ -282,3 +282,4 @@ def pancreatic_single_fault (fault1, x1, x2, x3, x4, x5, x6, x7, x8):
 
   output = ((b + c) ** 2) / ((a + b + c + d) ** 2)
   return(output)
+
