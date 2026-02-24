@@ -45,9 +45,9 @@ def pancreatic_single_fault (fault1, x1, x2, x3, x4, x5, x6, x7, x8):
     IGFR = int(IGF)
   
   if fault1 == 4:
-    ATM = 1
+    ATM = 0
   else:
-    ATM = int(not (DNA_Damage))
+    ATM = int(DNA_Damage)
   
   if fault1 == 5:
     TGFBR12 = 1
@@ -189,14 +189,14 @@ def pancreatic_single_fault (fault1, x1, x2, x3, x4, x5, x6, x7, x8):
     TSC1by2 = int((not(PKB_AKT and (not palmatine) and (not berberine) and (not gefitinib) and (not dacomitinib) and (not afatinib))) and (AMPK or berberine)) 
     
   if fault1 == 35:
-    MDM2 = 0
+    MDM2 = 1
   else:
     MDM2 = int(not (ATM))
 
   if fault1 == 36:
     P53 = 0
   else:
-    P53 = int((not (not MDM2)) and P38)      
+    P53 = int((not MDM2) and P38)      
 
   if fault1 == 37:     
     BRCA2 = 0
@@ -282,4 +282,5 @@ def pancreatic_single_fault (fault1, x1, x2, x3, x4, x5, x6, x7, x8):
 
   output = ((b + c) ** 2) / ((a + b + c + d) ** 2)
   return(output)
+
 
